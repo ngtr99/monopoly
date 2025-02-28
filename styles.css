@@ -1,0 +1,283 @@
+
+button {
+    cursor: pointer;
+}
+
+/* create monopoly map */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(11, 9vh);
+    display: fixed;
+}
+
+.container > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(57, 61, 102);
+    font-size: 1vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* create monopoly map */
+.free-parking {
+    background-image: url('images/map/free_parking.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid black;
+}
+
+
+.chance {
+    background-image: url('images/map/chance.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid black;
+}
+
+.white-van, .silver-van, .red-van, .sister-car {
+    background-image: url('images/map/van.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid black;
+}
+
+
+.community-chest {
+    background-image: url('images/map/community_chest.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid black;
+}
+
+.go-to-jail {
+    background-image: url('images/map/go_to_jail.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid black;
+}
+
+.jail {
+    background-image: url('images/map/jail.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid black;
+}
+
+
+.student-computer-service {
+    background-image: url('images/map/computer.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid black;
+}
+
+
+
+.go {
+    background-image: url('images/map/go.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid black;
+}
+
+/* inside the board */
+.chance-cards , .community-chest-cards{
+    grid-column: span 3;
+    grid-row: span 2;
+    border-radius: 10px;
+}
+
+.chance-cards {
+    background-color: rgb(161, 137, 123);
+}
+
+.chance-cards > button {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2vh;
+    background-color: rgb(161, 137, 123);
+    border: 1px solid rgb(96, 53, 33);
+    border-radius: 5px;
+    margin: 0.2vh;
+}
+
+.chance-cards > h2 {
+    font-size: 2vh;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.community-chest-cards {
+    background-color: rgb(171, 118, 153);
+}
+
+.community-chest-cards > button {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2vh;
+    background-color: rgb(171, 118, 153);
+    border: 1px solid rgb(155, 65, 80);
+    border-radius: 5px;
+    margin: 0.2vh;
+}
+
+.community-chest-cards > h2 {
+    font-size: 2vh;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.monopoly {
+    grid-column: span 7;
+    grid-row: span 2;
+    font-weight: bold;
+    gap: -10px;
+}
+
+.start-game {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(57, 61, 102);
+    color: white;
+    font-size: 2vh;
+    border-radius: 5px;
+}
+
+.board {
+    grid-column: span 3;
+    grid-row: span 3;
+    border-radius: 10px;
+    background-color: rgb(159, 202, 188);
+    display: flex;
+}
+
+.board > h2 {
+    font-size: 2vh;
+    color: rgb(37, 79, 33);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.board > p {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 1.5vh;
+}
+
+.announcement{
+    grid-column: span 3;
+    grid-row: span 2;
+    background-color: rgb(134, 149, 197);
+    border-radius: 5px;
+}
+
+.announcement > h2 {
+    font-size: 2vh;
+    color: rgb(35, 33, 97);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+.announcement > button {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5vh;
+    background-color: rgb(117, 124, 203);
+    border: 1px solid rgb(35, 33, 97);
+    border-radius: 5px;
+    margin: 1%;
+    width: 40%;
+    height: 15%;
+}
+
+.announcement > input {
+    width: 40%;
+    height: 10%;
+}
+
+
+/* create dice */
+
+.roll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(57, 61, 102);
+    color: white;
+    font-size: 2vh;
+    border-radius: 5px;
+}
+
+.roll-dice > img {
+    width: 100%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.dice {
+    border: 1px solid black;
+}
+
+
+/* players */
+.player1 {
+    border: 5px solid red;
+}
+
+.player2 {
+    border: 5px solid blue;
+}
+
+.player3 {
+    border: 5px solid green;
+}
+
+.player4 {
+    border: 5px solid yellow;
+}
+
+.player5 {
+    border: 5px solid purple;
+}
+
+.player6 {
+    border: 5px solid orange;
+}
+
+.player7 {
+    border: 5px solid pink;
+}
+
+.player8 {
+    border: 5px solid brown;
+}
+
+.player {
+    display: flex;
+    flex-direction: row;
+}
+
+
+

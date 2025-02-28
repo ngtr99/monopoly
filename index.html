@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monopoly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="free-parking" id="position21">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="the-lobby" id="position22" style="border: 1px solid black;" >
+            <h2>THE LOBBY</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $220</p>
+        </div>
+        <div class ="chance" id="position23">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="the-courtyard" id="position24" style="border: 1px solid black;">
+            <h2>THE COURTYARD</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $220</p>
+        </div>
+        <div class="priest-dining-room" id="position25" style="border: 1px solid black;">
+            <h2>PRIEST DINING ROOM</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $240</p>
+        </div>
+        <div class="white-van" id="position26">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="convent-chapel" id="position27" style="border: 1px solid black;">
+            <h2>CONVENT CHAPEL</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $260</p>
+        </div>
+        <div class="mary-mother-of-the-world-chapel" id="position28" style="border: 1px solid black;">
+            <h2 style="font-size: 1vh;">MARY MOTHER OF THE WORLD CHAPEL</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $260</p>
+        </div>
+        <div class="student-computer-service" id="position29">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="st-charles-chapel" id="position30" style="border: 1px solid black;">
+            <h2>ST. CHARLES CHAPEL</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $280</p>
+        </div>
+        <div class="go-to-jail" id="position31">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="the-refectory" id="position20" style="border: 1px solid black;">
+            <h2>THE REFECTORY</h2>      
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $200</p>      
+        </div>
+        <div></div>
+        <div class="community-chest-cards">
+            <h2 style="font-size: 2vh;">COMMUNITY CHEST</h2>
+            <button class="community-chest-cards-1" style="display: none;">Option 1</button>
+            <button class="community-chest-cards-2" style="display: none;">Option 2</button>
+            <button class="community-chest-cards-3" style="display: none;">Option 3</button>
+        </div>
+        <div></div>
+        <div class="announcement">
+            <h2>Please input the number of players</h2>
+            <button class="announcement-1" style="display: none;"></button>
+            <button class="announcement-2" style="display: none;"></button>
+            <input class="announcement-3" type="number" min="1" max="40" style="display: none;">
+            <button class="announcement-4" style="display: none;"></button>
+            <button class="announcement-5" style="display: none;"></button>
+        </div>
+        <div></div>
+        <div class="glennon-lounge" id="position32" style="border: 1px solid black;">
+            <h2>GLENNON LOUNGE</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $300</p>
+        </div>
+        <div class="the-heightts" id="position19" style="border: 1px solid black;">
+            <h2>THE HEIGHTS</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $160</p>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="priest-lounge" id="position33" style="border: 1px solid black;">
+            <h2>PRIEST LOUNGE</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $300</p>
+        </div>
+        <div class="community-chest" id="position18">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>   
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="community-chest" id="position34">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="the-gym" id="position17" style="border: 1px solid black;">
+            <h2>THE GYM</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $160</p>
+        </div>
+        <div></div>
+        <div class="monopoly">
+            <h2 style="font-size: 5vh;">MONOPOLY GAME</h2>
+            <p style="font-size: 2vh;"> The number of players: <input type="number" class="player-input" min="2" max="8"> <button class="start-game">Start Game</button> </p>
+        </div>
+        <div></div>
+        <div class="kenrick-lounge" id="position35" style="border: 1px solid black;">
+            <h2>KENRICK LOUNGE</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $320</p>
+        </div>
+        <div class="silver-van" id="position16">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+        <div class="sister-car" id="position36">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="the-auditorium" id="position15" style="border: 1px solid black;">
+            <h2>THE AUDITORIUM</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $160</p>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="roll-dice">
+            <img src="images/dice/dice-1.png" class="dice" alt="Dice Image">
+            <button class="roll">Roll</button>
+        </div>
+        <div></div>
+        <div class="chance" id="position37">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="the-library" id="position14" style="border: 1px solid black;">
+            <h2>THE LIBRARY</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $140</p>
+        </div>
+        <div></div>
+        <div class="board">
+            <h2>THE BOARD OF MONEY AND POSITION OF PLAYERS</h2>
+            <p></p>
+        </div>           
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="st-joseph-chapel" id="position38" style="border: 1px solid black;">
+            <h2>ST. JOSEPH CHAPEL</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price 350</p>
+        </div>
+        <div class="kenrich-light-and-magic" id="position13" style="border: 1px solid black;">
+            <h2>KENRICK LIGHT AND MAGIC</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $150</p>
+        </div>
+        <div></div>
+        <div></div>
+        <div class="chance-cards">
+            <h2 style="font-size: 2vh;">CHANCE</h2>
+            <button class="chance-cards-1"  style="display: none;">Option 1</button>
+            <button class="chance-cards-2"  style="display: none;">Option 2</button>
+            <button class="chance-cards-3"  style="display: none;">Option 3</button>
+        </div>
+        <div></div>
+        <div class="room-and-board" id="position39" style="border: 1px solid black;">
+            <h2>ROOM AND BOARD</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $75</p>
+        </div>
+        <div class="the-dorm" id="position12" style="border: 1px solid black;">
+            <h2>THE DORM</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $140</p>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="the-tower" id="position40" style="border: 1px solid black;">
+            <h2>THE TOWER</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $400</p>
+        </div>
+        <div class="jail" id="position11">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="weight-rom" id="position10" style="border: 1px solid black;">
+            <h2>WEIGHT ROOM</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $120</p>
+        </div>
+        <div class="laudry-room" id="position9" style="border: 1px solid black;">
+            <h2>LAUNDRY ROOM</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $100</p>
+        </div>
+        <div class="chance" id="position8">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="tennis-courts" id="position7" style="border: 1px solid black;">
+            <h2>TENNIS COURTS</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $100</p>
+        </div>
+        <div class="red-van" id="position6">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="formation-fee" id="position5" style="border: 1px solid black;">
+            <h2>FORMATION FEE</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $200 or pay 10%</p>
+        </div>
+        <div class="boiler-room" id="position4" style="border: 1px solid black;">
+            <h2>BOILER ROOM</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $60</p>
+        </div>
+        <div class="community-chest" id = "position3">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="wreck-room" id="position2" style="border: 1px solid black;">
+            <h2>WRECK ROOM</h2>
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+            <p>price $60</p>
+        </div>
+        <div class="go" id="position1">
+            <div class="player">
+                <div class="player1" style="display: none;"></div>
+                <div class="player2" style="display: none;"></div>
+                <div class="player3" style="display: none;"></div>
+                <div class="player4" style="display: none;"></div>
+                <div class="player5" style="display: none;"></div>
+                <div class="player6" style="display: none;"></div>
+                <div class="player7" style="display: none;"></div>
+                <div class="player8" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+    <script src="monopoly.js"></script>
+</html>

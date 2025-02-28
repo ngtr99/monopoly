@@ -303,9 +303,14 @@ btnRoll.addEventListener('click', function() {
 
 
         //move the player
-    
-        if (boardPositions[`position${players['player' + playerTurn].position}`]) {
-            if (players['player' + playerTurn].lender == null) {
+        if (players['player' + playerTurn].position == 5) {
+            if (players['player' + playerTurn].money * 0.1 > 200) {
+                players['player' + playerTurn].money = players['player' + playerTurn].money - 200;
+            } else {
+                players['player' + playerTurn].money = players['player' + playerTurn].money - (players['player' + playerTurn].money * 0.1);
+            }
+        } else if (boardPositions[`position${players['player' + playerTurn].position}`]) {
+            if (boardPositions[`position${players['player' + playerTurn].position}`].lender == null) {
                 btnRoll.disabled = true;
                 document.querySelector(`.announcement > h2`).textContent = `Player ${playerTurn} has landed on position ${players['player' + playerTurn].position} and has to pay $${boardPositions[`position${players['player' + playerTurn].position}`].rent} to the bank!`;
                 
@@ -331,11 +336,8 @@ btnRoll.addEventListener('click', function() {
                     document.querySelector('.announcement-4').style.display = "none";
                     document.querySelector('.announcement-5').style.display = "none";
                     buyLand = false;
-                    
-                    for(let i = 1; i <= numPlayers; i++) {
-                        document.querySelector('.board > p').innerHTML += 
-                        `<p>Player ${i} has ${players['player' + i].money} at the position ${players['player' + i].position}</p>`;
-                    }
+                    document.querySelector(`#position${players['player' + playerTurn].position}`).classList.add(`owned${playerTurn}`);
+
 
                     // Ensure player turn updates correctly
                     updatePlayerTurn();
@@ -386,7 +388,7 @@ btnRoll.addEventListener('click', function() {
 
             }
             if (playerTurn !== boardPositions[`position${players['player' + playerTurn].position}`].lender) {
-                players['player' + playerTurn].money -= boardPositions[`position${players['player' + playerTurn].position}`].price;
+                players['player' + playerTurn].money -= boardPositions[`position${players['player' + playerTurn].position}`].rent;
             }
         }
         
@@ -449,10 +451,6 @@ btnRoll.addEventListener('click', function() {
             newPosition.style.display = 'block';
             document.querySelector('.announcement > h2').textContent = `Player ${playerTurn} has chosen the car and is now on position ${players['player' + playerTurn].position}`;
             document.querySelector('.board > p').textContent = ` `;
-            for(let i = 1; i <= numPlayers; i++) {
-                document.querySelector('.board > p').innerHTML += 
-                `<p>Player ${i} has ${players['player' + i].money} at the position ${players['player' + i].position}</p>`;
-            }
             btnRoll.disabled = false;
 
         });
@@ -550,11 +548,7 @@ const chanceAction = function() {
         jail();
     }
 
-    document.querySelector('.board > p').textContent = ` `;
-    for(let i = 1; i <= numPlayers; i++) {
-        document.querySelector('.board > p').innerHTML += 
-        `<p>Player ${i} has ${players['player' + i].money} at the position ${players['player' + i].position}</p>`;
-    }
+
 
     document.querySelector('.chance-cards-1').style.display = "none";
     document.querySelector('.chance-cards-2').style.display = "none";
@@ -638,11 +632,7 @@ const communityAction = function() {
         jail();
     }
 
-    document.querySelector('.board > p').textContent = ` `;
-    for(let i = 1; i <= numPlayers; i++) {
-        document.querySelector('.board > p').innerHTML += 
-        `<p>Player ${i} has ${players['player' + i].money} at the position ${players['player' + i].position}</p>`;
-    }
+
 
     document.querySelector('.community-chest-cards-1').style.display = "none";
     document.querySelector('.community-chest-cards-2').style.display = "none";
@@ -699,11 +689,7 @@ const announcement1 = function() {
             }
         }
     }
-    document.querySelector('.board > p').textContent = ``;
-    for(let i = 1; i <= numPlayers; i++) {
-        document.querySelector('.board > p').innerHTML += 
-        `<p>Player ${i} has ${players['player' + i].money} at the position ${players['player' + i].position}</p>`;
-    }
+
 
     do {
         playerTurn++;
@@ -735,18 +721,15 @@ const announcement2 = function() {
 
 
 btnStart.addEventListener('click',function() {
-    document.querySelector('.board > p').textContent = ``;
     document.querySelector('.start-game').disabled = false;
     for(let i = 1; i <= numPlayers; i++) {
         players['player' + i].money = 2000;
         players['player' + i].position = 1;
-        document.querySelector('.board > p').innerHTML += 
-        `<p>Player ${i} has ${players['player' + i].money} at the position ${players['player' + i].position}</p>`;
     }
 });
 
 
-btnRoll.addEventListener('click', function() {
+document.querySelector('.announcement-3').addEventListener('change', function() {
     document.querySelector('.board > p').textContent = ` `;
     for(let i = 1; i <= numPlayers; i++) {
         document.querySelector('.board > p').innerHTML += 
@@ -754,4 +737,14 @@ btnRoll.addEventListener('click', function() {
     }
 });
 
+
+document.querySelectorAll('.roll, .start-game, .announcement-1, .announcement-2, .announcement-4, .announcement-5').forEach(function(each) {
+    each.addEventListener('click', function() {
+        document.querySelector('.board > p').textContent = ''; // Clear previous content
+        for(let i = 1; i <= numPlayers; i++) {
+            document.querySelector('.board > p').innerHTML += 
+            `<p>Player ${i} has ${players['player' + i].money} at the position ${players['player' + i].position}</p>`;
+        }
+    });
+});
 

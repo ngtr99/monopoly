@@ -279,5 +279,38 @@ button {
     flex-direction: row;
 }
 
+/* buy land */
+
+.owned1 {
+    background-color: rgb(199, 138, 138);
+}
+
+.owned2 {
+    background-color: rgb(138, 138, 199);
+}
+
+.owned3 {
+    background-color: rgb(138, 199, 138);
+}
+
+.owned4 {
+    background-color: rgb(199, 199, 138);
+}
+
+.owned5 {
+    background-color: rgb(199, 138, 199);
+}
+
+.owned6 {
+    background-color: rgb(138, 199, 199);
+}
+
+.owned7 {
+    background-color: rgb(199, 199, 199);
+}
+
+.owned8 {
+    background-color: rgb(138, 138, 138);
+}
 
 

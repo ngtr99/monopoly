@@ -19,35 +19,35 @@ const player8 = document.querySelector('.player8');
 const players = {
     player1: {
         position: 1,
-        money: 2000,
+        money: 0,
     },
     player2: {
         position: 1,
-        money: 2000,
+        money: 0,
     },
     player3: {
         position: 1,
-        money: 2000,
+        money: 0,
     },
     player4: {
         position: 1,
-        money: 2000,
+        money: 0,
     },
     player5: {
         position: 1,
-        money: 2000,
+        money: 0,
     },
     player6: {
         position: 1,
-        money: 2000,
+        money: 0,
     },
     player7: {
         position: 1,
-        money: 2000,
+        money: 0,
     },
     player8: {
         position: 1,
-        money: 2000,
+        money: 0,
     }
 }
 
@@ -253,12 +253,15 @@ btnStart.addEventListener('click', function() {
     for (let i = 1; i <= 8; i++) {
         let player = document.querySelector(`#position${players['player' + (i)].position} > .player > .player${i}`);
         player.style.display = 'none';
+        players['player' + i].money = 0;
     }
 
     //showing the new players
     for (let i = 1; i <= numPlayers; i++) {
         let player = document.querySelector(`#position1 > .player > .player${i}`);
         player.style.display = 'block';
+        players['player' + i].money = 2000;
+        players['player' + i].position = 1;
         document.querySelector('.announcement > h2').textContent = `The game has started! Player ${playerTurn} turn!`;
     }
 });
@@ -389,6 +392,7 @@ btnRoll.addEventListener('click', function() {
             }
             if (playerTurn !== boardPositions[`position${players['player' + playerTurn].position}`].lender) {
                 players['player' + playerTurn].money -= boardPositions[`position${players['player' + playerTurn].position}`].rent;
+                document.querySelector('.announcement > h2').textContent = `Player ${playerTurn} has paid $${boardPositions[`position${players['player' + playerTurn].position}`].rent} to player ${boardPositions[`position${players['player' + playerTurn].position}`].lender}`;
             }
         }
         
@@ -432,7 +436,7 @@ btnRoll.addEventListener('click', function() {
             document.querySelector('.announcement > h2').textContent = `Player ${playerTurn} is bankrupt!`;
             document.querySelector(`#position${players['player' + playerTurn].position} > .player > .player${playerTurn}`).style.display = 'none';
             numPlayers--;
-            if (numPlayers === 1) {
+            if (Number(numPlayers) === 1) {
                 for (let i = 1; i <= 8; i++) {
                     if (players['player' + i].money > 0) {
                         document.querySelector('.announcement > h2').textContent = `Player ${i} wins!`;
@@ -512,7 +516,7 @@ const chanceAction = function() {
             document.querySelector('.announcement > h2').textContent = `Player ${playerTurn} is bankrupt!`;
             document.querySelector(`#position${players['player' + playerTurn].position} > .player > .player${playerTurn}`).style.display = 'none';
             numPlayers--;
-            if (numPlayers === 1) {
+            if (Number(numPlayers) === 1) {
                 for (let i = 1; i <= 8; i++) {
                     if (players['player' + i].money > 0) {
                         document.querySelector('.announcement > h2').textContent = `Player ${i} wins!`;
@@ -592,11 +596,11 @@ const communityAction = function() {
     } else if (card.action === "pay") {
         players['player' + playerTurn].money += card.money;
         document.querySelector('.announcement > h2').textContent = `Player ${playerTurn} ${card.text} and now has $${players['player' + playerTurn].money}`;
-        if (players['player' + playerTurn].money < 0) {
+        if (players['player' + playerTurn].money <= 0) {
             document.querySelector('.announcement > h2').textContent = `Player ${playerTurn} is bankrupt!`;
             document.querySelector(`#position${players['player' + playerTurn].position} > .player > .player${playerTurn}`).style.display = 'none';
             numPlayers--;
-            if (numPlayers === 1) {
+            if (Number(numPlayers) === 1) {
                 for (let i = 1; i <= 8; i++) {
                     if (players['player' + i].money > 0) {
                         document.querySelector('.announcement > h2').textContent = `Player ${i} wins!`;
@@ -681,7 +685,7 @@ const announcement1 = function() {
         document.querySelector('.announcement > h2').textContent = `Player ${playerTurn} is bankrupt!`;
         document.querySelector(`#position${players['player' + playerTurn].position} > .player > .player${playerTurn}`).style.display = 'none';
         numPlayers--;
-        if (numPlayers === 1) {
+        if (Number(numPlayers) === 1) {
             for (let i = 1; i <= 8; i++) {
                 if (players['player' + i].money > 0) {
                     document.querySelector('.announcement > h2').textContent = `Player ${i} wins!`;
@@ -720,19 +724,10 @@ const announcement2 = function() {
 //board 
 
 
-btnStart.addEventListener('click',function() {
-    document.querySelector('.start-game').disabled = false;
-    for(let i = 1; i <= numPlayers; i++) {
-        players['player' + i].money = 2000;
-        players['player' + i].position = 1;
-    }
-});
-
 
 document.querySelector('.announcement-3').addEventListener('change', function() {
-    document.querySelector('.board > p').textContent = ` `;
     for(let i = 1; i <= numPlayers; i++) {
-        document.querySelector('.board > p').innerHTML += 
+        document.querySelector('.board > p').textContent += 
         `<p>Player ${i} has ${players['player' + i].money} at the position ${players['player' + i].position}</p>`;
     }
 });
@@ -748,3 +743,19 @@ document.querySelectorAll('.roll, .start-game, .announcement-1, .announcement-2,
     });
 });
 
+
+document.querySelector('.roll').addEventListener('click', function() {
+    if (players['player' + playerTurn].money <= 0) {
+        document.querySelector('.announcement > h2').textContent = `Player ${playerTurn} is bankrupt!`;
+        document.querySelector(`#position${players['player' + playerTurn].position} > .player > .player${playerTurn}`).style.display = 'none';
+        numPlayers--;
+        if (Number(numPlayers) === 1) {
+            for (let i = 1; i <= 8; i++) {
+                if (players['player' + i].money > 0) {
+                    document.querySelector('.announcement > h2').textContent = `Player ${i} wins!`;
+                }
+            }
+        }
+    }
+    btnRoll.disabled = false;
+});
